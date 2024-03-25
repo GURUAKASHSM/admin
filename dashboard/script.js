@@ -14,7 +14,7 @@ const formData = {
 
 
 function DisplayData() {
-    fetch("https://localhost:8080/adminpage", {
+    fetch("https://anon.up.railway.app/adminpage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -62,7 +62,7 @@ function LogOut() {
 
 function DisplaySellerData() {
     let count = 0
-    fetch("https://localhost:8080/getallsellerdata", {
+    fetch("https://anon.up.railway.app/getallsellerdata", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -104,7 +104,7 @@ function DisplaySellerData() {
 DisplaySellerData();
 
 function DisplayWorkers() {
-    fetch("https://localhost:8080/getworkers", {
+    fetch("https://anon.up.railway.app/getworkers", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -149,7 +149,7 @@ DisplayWorkers()
 
 
 function TotlalSales() {
-    fetch("https://localhost:8080/adminpage", {
+    fetch("https://anon.up.railway.app/adminpage", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -194,7 +194,7 @@ function calculatePercentage(totalAmount, receivedAmount) {
 }
 function DisplayFeedBack() {
     let count = 0;
-    fetch("https://localhost:8080/getfeedback", {
+    fetch("https://anon.up.railway.app/getfeedback", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -239,7 +239,7 @@ function DisplayFeedBack() {
 DisplayFeedBack()
 
 function deleteFeedback(email, feedback) {
-    fetch("https://localhost:8080/deletefeedback", {
+    fetch("https://anon.up.railway.app/deletefeedback", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -336,7 +336,7 @@ function addDeleteIcon(feedbackBox, email, feedback) {
     deleteIcon.innerHTML = "&#10006;"; // X icon
     deleteIcon.addEventListener("click", function () {
         // Send email and feedback to the "/deletefeedback" route
-        fetch("https://localhost:8080/deletefeedback", {
+        fetch("https://anon.up.railway.app/deletefeedback", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -382,7 +382,7 @@ function DisplayListUsers() {
     document.querySelector('.display-view').style.display = 'none';
     document.getElementById('update-form-admin-container').style.display = 'none';
     document.getElementById('snippetContent').style.display = 'block';
-    fetch('https://localhost:8080/getallcustomerdata')
+    fetch('https://anon.up.railway.app/getallcustomerdata')
         .then(response => response.json())
         .then(data => {
             let html = ""
@@ -455,7 +455,7 @@ function DeleteData(email, coll) {
 
 
     // Send a DELETE request to your server to delete the data
-    fetch("https://localhost:8080/deletedata", {
+    fetch("https://anon.up.railway.app/deletedata", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -512,7 +512,7 @@ function DisplayListSeller() {
     document.getElementById("event-wrapper").style.display = 'none';
     document.getElementById('update-form-admin-container').style.display = 'none';
     document.getElementById('sellersnip').style.display = 'block';
-    fetch("https://localhost:8080/getallsellerdata", {
+    fetch("https://anon.up.railway.app/getallsellerdata", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -597,7 +597,7 @@ function DisplayListInventory() {
     document.getElementById("event-wrapper").style.display = 'none';
     document.getElementById('Inventorysnip').style.display = 'block';
     document.getElementById('update-form-admin-container').style.display = 'none';
-    fetch("https://localhost:8080/getallinventorydata", {
+    fetch("https://anon.up.railway.app/getallinventorydata", {
         method: "GET", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -702,7 +702,7 @@ document.getElementById("delete-form").addEventListener("submit", function (even
     };
 
     // Send a DELETE request to your server to delete the data
-    fetch("https://localhost:8080/deletedata", {
+    fetch("https://anon.up.railway.app/deletedata", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -797,7 +797,7 @@ document.getElementById("update-form").addEventListener("submit", function (even
     };
     console.log(requestData)
 
-    fetch("https://localhost:8080/update", {
+    fetch("https://anon.up.railway.app/update", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -879,7 +879,7 @@ sellerForm.addEventListener('submit', (e) => {
         }
 
         // Send the seller data as JSON in the request body
-        fetch('https://localhost:8080/createseller', {
+        fetch('https://anon.up.railway.app/createseller', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -969,7 +969,7 @@ document.getElementById("employee-wrapper").addEventListener("submit", function 
         console.log(formData)
 
         // Send a POST request to your Go backend
-        fetch("https://localhost:8080/createworker", {
+        fetch("https://anon.up.railway.app/createworker", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -1036,7 +1036,7 @@ document.getElementById("admin-wrapper").addEventListener("submit", function (ev
     console.log(formData)
 
     // Send a POST request to your Go backend
-    fetch("https://localhost:8080/createadmin", {
+    fetch("https://anon.up.railway.app/createadmin", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -1121,7 +1121,7 @@ function DisplayFeedBacks() {
     document.getElementById("calendar").style.display = 'none';
     document.getElementById("event-wrapper").style.display = 'none';
     document.getElementById('workersnip').style.display = 'none';
-    fetch("https://localhost:8080/getfeedback", {
+    fetch("https://anon.up.railway.app/getfeedback", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -1200,7 +1200,7 @@ function DisplayAllWorkers() {
     document.getElementById("calendar").style.display = 'none';
     document.getElementById("event-wrapper").style.display = 'none';
     document.getElementById('workersnip').style.display = 'block';
-    fetch("https://localhost:8080/getworkers", {
+    fetch("https://anon.up.railway.app/getworkers", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -1277,7 +1277,7 @@ function ViewData(id, profession) {
     document.getElementById("calendar").style.display = 'none';
     document.getElementById("event-wrapper").style.display = 'none';
 
-    fetch("https://localhost:8080/getdata", {
+    fetch("https://anon.up.railway.app/getdata", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -1748,7 +1748,7 @@ $(document).ready(async function () {
         };
 
         try {
-            const response = await fetch("https://localhost:8080/getevent", {
+            const response = await fetch("https://anon.up.railway.app/getevent", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -1866,7 +1866,7 @@ document.getElementById("event-form").addEventListener("submit", function (event
     console.log(requestData)
 
     // Send a DELETE request to your server to delete the data
-    fetch("https://localhost:8080/addevent", {
+    fetch("https://anon.up.railway.app/addevent", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -1894,7 +1894,7 @@ function BlockUser(email, collection) {
         email,
         collection,
     }
-    fetch("https://localhost:8080/block", {
+    fetch("https://anon.up.railway.app/block", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -1952,7 +1952,7 @@ document.getElementById("shutdown-form").addEventListener("submit", () => {
         return
     }
 
-    fetch("https://localhost:8080/shutdown", {
+    fetch("https://anon.up.railway.app/shutdown", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -2042,7 +2042,7 @@ function ClearDB(collection) {
         id: adminObject.token,
         collection,
     }
-    fetch("https://localhost:8080/cleardb", {
+    fetch("https://anon.up.railway.app/cleardb", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -2116,7 +2116,7 @@ function Displayallnotapprovedseller() {
     const formData = {
         token: adminObject.token,
     }
-    fetch("https://localhost:8080/getallnotapprovedseller", {
+    fetch("https://anon.up.railway.app/getallnotapprovedseller", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -2183,7 +2183,7 @@ function ApproveSeller(id) {
         token: adminObject.token,
         sellerid: id,
     }
-    fetch("https://localhost:8080/approveseller", {
+    fetch("https://anon.up.railway.app/approveseller", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -2270,7 +2270,7 @@ function DisplayOrders() {
         token: adminObject.token,
     }
 
-    fetch("https://localhost:8080/getallorders", {
+    fetch("https://anon.up.railway.app/getallorders", {
         method: "POST", // Use DELETE method to delete data
         headers: {
             "Content-Type": "application/json"
@@ -2359,7 +2359,7 @@ async function GetOrder(id) {
             orderid: id,
         }
         console.log(data)
-        const output = await fetch('https://localhost:8080/getcustomerorderforadmin', {
+        const output = await fetch('https://anon.up.railway.app/getcustomerorderforadmin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -2561,7 +2561,7 @@ async function DeleteOrder(id) {
             orderid: id,
         }
         console.log(data)
-        const output = await fetch('https://localhost:8080/deleteorder', {
+        const output = await fetch('https://anon.up.railway.app/deleteorder', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
