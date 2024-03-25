@@ -28,7 +28,7 @@ document.querySelector('.login100-form-btn').addEventListener('click', () => {
         return
     }
     // Send a POST request to your Go backend
-    fetch("https://localhost:8080/adminlogin", {
+    fetch("https://anon.up.railway.app/adminlogin", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
